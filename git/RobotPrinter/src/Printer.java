@@ -55,15 +55,12 @@ public class Printer {
 	 * Loads the paper into the printer.
 	 */
 	public static void resetVertical(){
-		
 		motorA.setPower(30);
 		cs.setFloodlight(true);
 		while(checkColorSensor()){
 			motorA.forward();
 		}
 		motorA.stop();
-		motorA.resetTachoCount();
-		Motor.A.rotate(720);
 		Sound.beep();
 	}
 	
